@@ -83,6 +83,7 @@ export default function sidebar() {
   return (
     <div className={styles.container}>
       <div className={styles.user}>
+      "priority"
         <Image className={styles.userImage} src="/noavatar.png" alt="" width="50" height="50"/>
         <div className={styles.userDetail}>
           <span className={styles.username}>Shakira Fan</span>
@@ -97,6 +98,10 @@ export default function sidebar() {
           ))}
         </li>))}
       </ul>
+      <button className={styles.logout}>
+        <MdLogout />
+        Logout
+      </button>
     </div>
   )
 }
