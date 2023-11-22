@@ -18,6 +18,7 @@ export default function trainsactions() {
           <tr>
             <td>
               <div className={styles.user}>
+              {/* "priority" */}
                 <Image
                   src="/noavatar.png"
                   alt=''
@@ -37,6 +38,7 @@ export default function trainsactions() {
           <tr>
             <td>
               <div className={styles.user}>
+              {/* "priority" */}
                 <Image
                   src="/noavatar.png"
                   alt=''
@@ -56,6 +58,7 @@ export default function trainsactions() {
           <tr>
             <td>
               <div className={styles.user}>
+              {/* "priority" */}
                 <Image
                   src="/noavatar.png"
                   alt=""
@@ -77,6 +80,7 @@ export default function trainsactions() {
           <tr>
             <td>
               <div className={styles.user}>
+              {/* "priority" */}
                 <Image
                   src="/noavatar.png"
                   alt=""

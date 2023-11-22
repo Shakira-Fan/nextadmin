@@ -9,7 +9,7 @@ export default function ProductsPage() {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Search for a product..." />
-        <Link href="/dashboard/users/">
+        <Link href="/dashboard/products/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>
@@ -28,6 +28,7 @@ export default function ProductsPage() {
           <tr>
             <td>
               <div className={styles.product}>
+              {/* "priority" */}
                 <Image
                   src="/noproduct.jpg"
                   alt=""
@@ -44,7 +45,7 @@ export default function ProductsPage() {
             <td>72</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/">
+                <Link href="/dashboard/products/test">
                   <button className={`${styles.button} ${styles.view}`}>View</button>
                 </Link>
                 <button className={`${styles.button} ${styles.delete}`}>Delete</button>
