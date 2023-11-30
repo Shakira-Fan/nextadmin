@@ -104,7 +104,8 @@ export const updateUser = async (formData) => {
     };
 
     Object.keys(updateFields).forEach(
-      (key) => (updateFields[key] === "" || undefined) && delete updateFields[key]
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
     );
 
     await User.findByIdAndUpdate(id, updateFields);
@@ -125,11 +126,17 @@ export const updateProduct = async (formData) => {
     connectToDB();
 
     const updateFields = {
-      title, desc, price, stock, color, size
+      title,
+      desc,
+      price,
+      stock,
+      color,
+      size,
     };
 
     Object.keys(updateFields).forEach(
-      (key) => (updateFields[key] === "" || undefined) && delete updateFields[key]
+      (key) =>
+        (updateFields[key] === "" || undefined) && delete updateFields[key]
     );
 
     await Product.findByIdAndUpdate(id, updateFields);
@@ -142,13 +149,13 @@ export const updateProduct = async (formData) => {
   redirect("/dashboard/products");
 };
 
-export const authenticate = async (formData) => {
-  const {username, password}= Object.fromEntries(formData);
-
+export const authenticate = async (prevState, formData) => {
+  
+  const { username, password } = Object.fromEntries(formData);
+  console.log(username, password );
   try {
-    await signIn("credentials",{username, password});
+    await signIn("credentials", { username, password });
   } catch (error) {
-    console.log(err);
-    throw error;
+    return "Wrong Credentials!";
   }
 };
